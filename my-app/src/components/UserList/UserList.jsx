@@ -1,17 +1,10 @@
-import { useEffect, useState } from "react";
-import { fetchUsers } from "./../../utils/requests";
+import { v4 as uuidv4 } from "uuid";
 
-export const UserList = () => {
-  const [userList, setUserList] = useState([]);
-  useEffect(() => {
-    fetchUsers(setUserList);
-  }, []);
-  console.log(userList);
-
+export const UserList = ({ userList }) => {
   return (
     <div>
       {userList.map((el) => (
-        <h4 key={el.id}>{el.firstName}</h4>
+        <h4 key={uuidv4()}>{el.firstName}</h4>
       ))}
     </div>
   );

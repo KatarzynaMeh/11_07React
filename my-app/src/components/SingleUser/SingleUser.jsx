@@ -2,10 +2,9 @@ import { useEffect } from "react";
 import { useState } from "react"
 import { fetchSingleUser } from "../../utils/singleRequests";
 import { UserList } from "../UserList/UserList";
-import { SingleUser } from './SingleUser';
 
 export const SingleUser = () => {
-    const [singleUser, setSingleUser] = useState();
+    const [singleUser, setSingleUser] = useState({});
     useEffect(() => {
         fetchSingleUser(3, setSingleUser)
     }, [])
@@ -13,7 +12,7 @@ export const SingleUser = () => {
 
     return (
       <div>
-            <h4></h4>
+        <h4>{singleUser.firstName}</h4>
       </div>
     );
 }

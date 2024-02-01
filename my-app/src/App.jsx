@@ -1,5 +1,6 @@
 import "./App.css";
 import { AboutMe } from "./components/AboutMe/AboutMe";
+import { AddUser } from "./components/AddUser/AddUser";
 import ChangeColor from "./components/ChangeColor/ChangeColor";
 import { Counter } from "./components/Counter/Counter";
 import { Effect } from "./components/Effect/Effect";
@@ -9,6 +10,7 @@ import { SingleUser } from "./components/SingleUser/SingleUser";
 import { Todo } from "./components/Todo/Todo";
 import TodoList from "./components/TodoList/TodoList";
 import { UserList } from "./components/UserList/UserList";
+import { UsersPage } from "./pages/UsersPage";
 
 export function App() {
   // const todoLine = {
@@ -25,8 +27,10 @@ export function App() {
   return (
     <>
       <div className="App">Hello World</div>
+      
+      <UsersPage />
       {/* <UserList /> */}
-      <SingleUser />
+      {/* <SingleUser /> */}
       {/* <Effect /> */}
       {/* <p>My name is Katia</p>
       <AboutMe />
